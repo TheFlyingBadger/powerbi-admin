@@ -1,2 +1,8 @@
 APP:
   DEBUG: True
+
+AZURE:
+  TENANT_ID: ced71ed6-76dd-43d0-9acc-cf122b3bc423
+  CLIENT_ID: 569aae35-b12e-47cb-93c3-dad26f7a46c3
+  SCOPE: https://analysis.windows.net/powerbi/api/.default
+  CLIENT_SECRET_FILE: ./client.secret.txt
