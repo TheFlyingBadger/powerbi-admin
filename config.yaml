@@ -2,10 +2,21 @@ APP:
   DEBUG: True
 
 AZURE:
+  SCOPE: https://analysis.windows.net/powerbi/api/.default
+
   TENANT_ID: ced71ed6-76dd-43d0-9acc-cf122b3bc423
   CLIENT_ID: 569aae35-b12e-47cb-93c3-dad26f7a46c3
-  SCOPE: https://analysis.windows.net/powerbi/api/.default
-  SCOPEY: https://api.powerbi.com/v1.0/myorg/.default
-  # Enter either CLIENT_SECRET_FILE or CLIENT_SECRET - CLIENT_SECRET_FILE will be used first
-  CLIENT_SECRET_FILE: ./client.secret.txt
+
+  # AUTH_TYPE should be either usernamepassword, or clientsecret (case insensitive)
+  AUTH_TYPE: usernamePassword
+
+  # for AUTH_TYPE usernamepassword
+  # Enter either PASSWORD_FILE or PASSWORD - PASSWORD_FILE will be used in preference if both exist
+  USERNAME: svc_biplatformdataconsume@mrwa.wa.gov.au
+  PASSWORD_FILE: ./password.txt
+  PASSWORD:
+
+  # for AUTH_TYPE clientsecret
+  # Enter either CLIENT_SECRET_FILE or CLIENT_SECRET - CLIENT_SECRET_FILE will be used in preference if both exist
   CLIENT_SECRET:
+  CLIENT_SECRET_FILE: ./client.secret.txt
